@@ -1,0 +1,65 @@
+# Copyright 2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+#
+# BLE Wilbur Remotes KeyLayout File
+#
+# This file is based on Wibur_remote_specification_V0.2
+
+key 96    DPAD_CENTER
+key 103   DPAD_UP
+key 105   DPAD_LEFT
+key 106   DPAD_RIGHT
+key 108   DPAD_DOWN
+key 113   VOLUME_MUTE
+key 114   VOLUME_DOWN
+key 115   VOLUME_UP
+key 116   POWER
+key 172   HOME
+key 217   SEARCH
+key 158   BACK
+key 139   MENU
+key 168   MEDIA_REWIND
+key 208   MEDIA_FAST_FORWARD
+key 164   MEDIA_PLAY_PAUSE
+
+# App Keys
+key 249   APP_1
+key 250   APP_2
+key 251   APP_3
+key 253   APP_4
+
+key 744   APP_1
+key 745   APP_2
+key 746   APP_3
+key 747   APP_4
+
+key 362   LIVE_TV
+key 750   SETTINGS
+
+key 582   VOICE_CMD
+key 372   ZOOM
+
+key 402   CHANNEL_UP
+key 403   CHANNEL_DOWN
+key 398   PROG_RED
+key 399   PROG_GREEN
+key 400   PROG_BLUE
+key 252   TV_NUMBER_ENTRY
+key 359   SLEEP_TIMER
+key 405   LAST_CHANNEL
+key 748   RECENTS
+
+key 2     NUMPAD_1
+key 3     NUMPAD_2
+key 4     NUMPAD_3
+key 5     NUMPAD_4
+key 6     NUMPAD_5
+key 7     NUMPAD_6
+key 8     NUMPAD_7
+key 9     NUMPAD_8
+key 10    NUMPAD_9
+key 11    NUMPAD_0
+
+key 388   CAPTIONS
+key 358   TV_TELETEXT
+
+

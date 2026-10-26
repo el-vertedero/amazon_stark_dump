@@ -1,0 +1,11 @@
+service perfstatsd /system/bin/perfstatsd
+    user root
+    group system
+    class main
+    disabled
+
+on property:persist.perfstats.enable=0
+    stop perfstatsd
+
+on property:persist.perfstats.enable=1
+    start perfstatsd

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   Copyright (c) 2018 - 2022 Amazon.com, Inc. or its affiliates.  All rights reserved.
+   PROPRIETARY/CONFIDENTIAL.  USE IS SUBJECT TO LICENSE TERMS.
+-->
+<permissions>
+    <!-- By declaring the feature here
+         The API PackageManager.hasSystemFeature(String feature) will
+         return true if passed the feature name below.-->
+    <feature name="com.amazon.ffs.enabled"/>
+    <feature name="com.amazon.ugs.enabled"/>
+    <feature name="com.amazon.far_field.enabled" />
+    <feature name="com.amazon.led_controller.enabled"/>
+    <feature name="com.amazon.feature.profile_picker"/>
+
+    <!-- Features used in NetworkStatusAdvisor to characterize devices -->
+    <feature name="com.amazon.firetv.ship.with.ethernet_adapter"/>
+    <feature name="com.amazon.firetv.4k.supported"/>
+    <!-- Feature flag indicating that this device has Home Theater Tuple
+         creation GUI for both manual flow and FFP flow. -->
+    <feature name="com.amazon.feature.avls.htt_creation"/>
+</permissions>

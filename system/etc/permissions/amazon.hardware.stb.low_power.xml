@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+    <!-- Indicates that product supports Off Mode to
+         satisfy 0.5W Low power requirement -->
+    <feature name="android.hardware.stb.low_power" />
+</permissions>

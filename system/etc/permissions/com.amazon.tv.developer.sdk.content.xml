@@ -1,0 +1,4 @@
+<permissions>
+     <library name="com.amazon.tv.developer.sdk.content" file="/system/framework/com.amazon.tv.developer.sdk.content.jar"/> 
+     <feature name="com.amazon.tv.developer.sdk.content" version="1" />
+</permissions>

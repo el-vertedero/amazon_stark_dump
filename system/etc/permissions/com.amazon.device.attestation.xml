@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+   Copyright (c) 2022 - 2024 Amazon.com, Inc. or its affiliates.  All rights reserved.
+   PROPRIETARY/CONFIDENTIAL.  USE IS SUBJECT TO LICENSE TERMS.
+-->
+<permissions>
+     <library name="com.amazon.device.attestation" file="/system/framework/com.amazon.device.attestation.jar"/> 
+     <feature name="com.amazon.device.attestation" version="1" />
+</permissions>

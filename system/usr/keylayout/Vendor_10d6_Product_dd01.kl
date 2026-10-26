@@ -1,0 +1,38 @@
+#
+# Copyright (c) 2019 Amazon.com, Inc. or its affiliates.  All rights reserved.
+# PROPRIETARY/CONFIDENTIAL.  USE IS SUBJECT TO LICENSE TERMS.
+#
+
+key 96    DPAD_CENTER
+key 102   MOVE_HOME
+key 103   DPAD_UP
+key 105   DPAD_LEFT
+key 106   DPAD_RIGHT
+key 108   DPAD_DOWN
+key 113   VOLUME_MUTE
+key 114   VOLUME_DOWN
+key 115   VOLUME_UP
+key 116   POWER
+key 127   MENU
+key 128   MEDIA_STOP
+key 139   MENU
+key 140   CALCULATOR
+key 152   POWER
+key 158   BACK
+key 164   MEDIA_PLAY_PAUSE
+key 168   MEDIA_REWIND
+key 172   HOME
+key 208   MEDIA_FAST_FORWARD
+key 217   SEARCH
+key 362   GUIDE
+key 402   CHANNEL_UP
+key 403   CHANNEL_DOWN
+key 159   FORWARD
+key 420   ZOOM
+key 138   VOICE_CMD
+key 405   RECENTS
+key 142   SLEEP
+key 183   REBOOT
+key 184   FACTORY_RESET
+key 185   UPLOAD_LOGS
+key 186   SYSTEM_XRAY

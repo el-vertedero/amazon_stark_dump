@@ -1,0 +1,89 @@
+{
+    "description": "ILS GCA config",
+    "version": "1.0",
+    "CAMPSchemaVersion": "1.0",
+    "streams": [
+        {
+            "name": "ilsGCA",
+            "type": "core.GenericCA",
+            "args": {
+                "capability": {
+                    "discovery": {
+                        "type": "AlexaInterface",
+                        "interface": "Alexa.Sensor.Proximity",
+                        "instance": "BLUETOOTH",
+                        "version": "1.0",
+                        "properties": {
+                            "supported": [
+                                {
+                                    "name": "deviceProximity",
+                                    "type": "object",
+                                    "default": "{\"neighbors\":[]}"
+                                }
+                            ],
+                            "proactivelyReported": true,
+                            "retrievable": true
+                        }
+                    },
+                    "directives": [
+                        {
+                            "name": "SetSecurityMaterial"
+                        },
+                        {
+                            "name": "SetDeviceProximityPolicy"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "SetSecurityMaterial Directive Out",
+            "type": "core.client.out",
+            "inputs": [
+                "GenericCA|Directives|Alexa.Sensor.Proximity|SetSecurityMaterial|IPCIn"
+            ],
+            "args": {
+                "conditional": {
+                    "DIRECTIVE": {
+                        "namespace": "Alexa.Sensor.Proximity"
+                    }
+                }
+            }
+        },
+        {
+            "name": "SetDeviceProximityPolicy Directive Out",
+            "type": "core.client.out",
+            "inputs": [
+                "GenericCA|Directives|Alexa.Sensor.Proximity|SetDeviceProximityPolicy|IPCIn"
+            ],
+            "args": {
+                "conditional": {
+                    "DIRECTIVE": {
+                        "namespace": "Alexa.Sensor.Proximity"
+                    }
+                }
+            }
+        },
+        {
+            "name": "GenericCA|Events|Alexa.Sensor.Proximity|IPCIn",
+            "type": "core.client.in"
+        },
+        {
+            "name": "GenericCA|Properties|Alexa.Sensor.Proximity|deviceProximity|IPCIn",
+            "type": "core.client.in"
+        }
+
+    ],
+    "exec": [
+        {
+            "command": "connect",
+            "input": "GenericCA|Events|Alexa.Sensor.Proximity|IPCIn",
+            "consumer": "GenericCA|Events|Alexa.Sensor.Proximity|IPCOut"
+        },
+        {
+            "command": "connect",
+            "input": "GenericCA|Properties|Alexa.Sensor.Proximity|deviceProximity|IPCIn",
+            "consumer": "GenericCA|Properties|Alexa.Sensor.Proximity|deviceProximity|IPCOut"
+        }
+    ]
+}

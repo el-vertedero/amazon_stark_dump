@@ -1,0 +1,4 @@
+<permissions>
+     <library name="com.amazon.tv.developer.sdk.cwlm" file="/system/framework/com.amazon.tv.developer.sdk.cwlm.jar"/> 
+     <feature name="com.amazon.tv.developer.sdk.cwlm" version="1" />
+</permissions>

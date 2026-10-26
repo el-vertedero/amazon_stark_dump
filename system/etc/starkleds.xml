@@ -1,0 +1,44 @@
+<leds platform="stark">
+
+  <state name="BOOTING"              animation="active-end" transparency="0" resourceId="0" layer="0" autoStop="1" />
+  <state name="NOT_CONNECTED"        animation="setup-mode" transparency="0" resourceId="0" layer="0" />
+  <state name="BT_DISCOVERING"       animation="btconnect" transparency="0" resourceId="0" />
+  <state name="BT_PAIRING"           animation="bt-pair" transparency="0" />
+  <state name="BT_CONNECTING"        animation="btconnect" />
+  <state name="FACTORY_RESET"        animation="factory-reset" />
+  <state name="INPUT_EVENT_RECEIVED" animation="active-end" />
+  <state name="STANDBY"              animation="off" />
+  <state name="DCS_ACTIVE"           animation="wait" />
+
+  <intent action="android.intent.action.BOOT_COMPLETED">
+    <deactivate state="BOOTING" />
+  </intent>
+  <intent action="com.amazon.tv.networkmonitor.INTERNET_DOWN">
+    <activate state="NOT_CONNECTED" />
+  </intent>
+  <intent action="com.amazon.tv.networkmonitor.INTERNET_UP">
+    <deactivate state="NOT_CONNECTED" />
+  </intent>
+  <intent action="com.amazon.tv.settings.BACKUP_AND_RESET_SETTINGS_FROM_REMOTE">
+    <activate state="FACTORY_RESET" />
+  </intent>
+  <intent action="com.amazon.tv.settings.BACKUP_AND_RESET_CANCELED">
+    <deactivate state="FACTORY_RESET" />
+  </intent>
+  <intent action="com.amazon.android.service.wifi.CONNECTION_STATUS">
+    <deactivate state="BT_CONNECTING" />
+    <activate state="BT_CONNECTING" extra="connection_state" type="Integer" value="1" />
+  </intent>
+  <intent action="com.amazon.ledcontroller.ACTION_FAST_BLINK">
+    <activate state="INPUT_EVENT_RECEIVED" />
+  </intent>
+  <intent action="com.amazon.ledcontroller.ACTION_STAND_BY">
+    <activate state="STANDBY" />
+  </intent>
+  <intent action="com.amazon.tv.devicecontrol.ACTIVE">
+    <activate state="DCS_ACTIVE" />
+  </intent>
+  <intent action="com.amazon.tv.devicecontrol.INACTIVE">
+    <deactivate state="DCS_ACTIVE" />
+  </intent>
+</leds>

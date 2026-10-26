@@ -1,0 +1,7 @@
+<exceptions>
+    <exception package="com.amazon.comms.starktachyon">
+        <permission name="android.permission.CAMERA" fixed="true"/>
+        <permission name="android.permission.RECORD_AUDIO" fixed="true"/>
+    </exception>
+</exceptions>
+

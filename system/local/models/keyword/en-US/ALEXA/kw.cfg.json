@@ -1,0 +1,98 @@
+{
+  "acoustic-model": {
+    "non-speech-pdf": 0,
+    "speech-pdf": 0
+  },
+  "keyword-orchestra": {
+    "buffer-size": 200,
+    "keyword-spotters": [
+      {
+        "classifier": {
+          "type": "exponential-decay",
+          "decay-rate": 0.6
+        },
+        "name": "ALEXA",
+        "spotter": {
+          "classification-thresholds": {
+            "accept-threshold": 0.82,
+            "notify-threshold": 0.74,
+            "overrides": [
+              {
+                "accept-threshold": 0.75644,
+                "clientProperties": [
+                  {
+                    "equals": 1,
+                    "name": "AlarmState"
+                  }
+                ]
+              },
+              {
+                "accept-threshold": 0.75644,
+                "clientProperties": [
+                  {
+                    "equals": 1,
+                    "name": "AudioPlayerState"
+                  }
+                ]
+              },
+              {
+                "accept-threshold": 0.75644,
+                "clientProperties": [
+                  {
+                    "equals": 1,
+                    "name": "audio_playback"
+                  }
+                ]
+              }
+            ]
+          },
+          "scorer-index": 1,
+          "keyword-feature-window-length": 100,
+          "keyword-start-scorer-index": 3,
+          "keyword-end-scorer-index": 4,
+          "lock-period": 100
+        }
+      },
+      {
+        "classifier": {
+          "type": "exponential-decay",
+          "decay-rate": 0.6
+        },
+        "name": "STOP",
+        "spotter": {
+          "classification-thresholds": {
+            "accept-threshold": 0.35
+          },
+          "scorer-index": 2,
+          "keyword-feature-window-length": 100,
+          "keyword-start-scorer-index": 3,
+          "keyword-end-scorer-index": 4,
+          "lock-period": 100
+        }
+      }
+    ]
+  },
+  "keyword-orchestra-monitor": {
+    "statistics": {
+      "classification": {
+        "histogram": {
+          "max": 1,
+          "min": 0,
+          "size": 50
+        }
+      },
+      "segmentation": {
+        "histogram": {
+          "max": 1,
+          "min": 0,
+          "size": 1
+        }
+      }
+    }
+  },
+  "object_type_name": "keyword-spotter-orchestra-config",
+  "object_type_version": 2,
+  "word-symbol-table": {
+    "filename": "words.shrunk.txt"
+  }
+}

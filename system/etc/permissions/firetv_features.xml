@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   Copyright (c) 2020-2023 Amazon.com, Inc. or its affiliates.  All rights reserved.
+   PROPRIETARY/CONFIDENTIAL.  USE IS SUBJECT TO LICENSE TERMS.
+-->
+<permissions>
+    <!-- By declaring the feature here
+         The api PackageManager.hasSystemFeature(String feature) will
+         return true if passed the feature name below.-->
+    <feature name="com.amazon.feature.contextual_screensaver"/>
+    <feature name="com.amazon.feature.dynamic_key_mapping"/>
+
+    <!-- Feature to indicate the starboard is not enabled on the device -->
+    <feature name="com.amazon.feature.no_starboard_enabled"/>
+    <feature name="com.amazon.feature.hybrid_adid"/>
+    <feature name="com.amazon.feature.cookie_consent_enabled"/>
+</permissions>
